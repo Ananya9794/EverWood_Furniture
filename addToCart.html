@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Website title-->
+    <title>E-Commerce</title>
+    <!--linked all css file-->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .cart-section-bottom{
+             background: linear-gradient(to bottom,var(--sixth-color),rgb(238, 244, 241)); 
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Loader Section -->
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+    <!--header section start-->
+    <header class="header sticky" id="header">
+        <div class="max-width">
+            <div class="header-inner ">
+            <div class="logo">
+                <div class="logo-image">
+                    <a  class="logo-link" href="index.html">
+                        <span>Ever</span><span>Wood</span><i class="fa-solid fa-couch"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="navbar">
+                <nav class="nav-list">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="shop.html" class="nav-link">Shop</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="service.html" class="nav-link">Service</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="login.html" class="nav-link"><i class="fa-regular fa-user"></i></a>
+                    <a href="addToCart.html" class="nav-link"><i class="fa-solid fa-cart-shopping"></i></a>
+                    
+                </nav>
+            </div>
+            <i class="fa-solid bars fa-bars"></i>
+              </div>
+        </div>
+
+    </header>
+<!-- ---------------burger icon------------------ -->
+    <div class="side-menu" id="sideMenu">
+    <i class="fa-solid fa-xmark close-btn" id="closeBtn"></i>
+    <nav class="side-nav">
+        <a href="index.html" class="side-link">Home</a>
+        <a href="shop.html" class="side-link">Shop</a>
+        <a href="about.html" class="side-link">About Us</a>
+        <a href="service.html" class="side-link">Service</a>
+        <a href="blog.html" class="side-link">Blog</a>
+        <a href="contact.html" class="side-link">Contact</a>
+    </nav>
+</div>
+<!-- ----------------------------------------------------- -->
+
+    <!--header section end-->
+    <!--main section start-->
+    <main class="main-section">
+        
+        <section class="shop-title">
+            <div class="max-width">
+                <h2>Cart</h2>
+            </div>
+        </section>
+
+        <section class="cart-section">
+            <div class="max-width">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="images/Lounge-Chair-PNG-HD.png" alt="" height="200px" width="200px"></td>
+                            <td>Product1</td>
+                            <td>$99.00</td>
+                            <td>
+                                <button class="minus">-</button>
+                                <input type="text" value="4">
+                                <button class="plus">+</button>
+                            </td>
+                            <td>$99.00</td>
+                            <td>x</td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="images/3d-pink-arm-chair-pink-soft-sofa-3d-rendering-png.png" alt="" height="200px" width="200px"></td>
+                            <td>Product2</td>
+                            <td>$29.00</td>
+                            <td>
+                                <button class="minus">-</button>
+                                <input type="text" value="4">
+                                <button class="plus">+</button>
+                            </td>
+                            <td>$29.00</td>
+                            <td>x</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- bootom -->
+                 
+            </div>
+        </section>
+
+       <section class="cart-section-bottom">
+                <div class="max-width">
+                 <div class="update-cart-section">
+                    <div class="cart-update">
+                        <button>Update cart</button>
+                        <button>Continue Shopping</button>
+                        <h3>Coupon</h3>
+                        <p>Enter your coupon code if you have one.</p>
+                        <input type="text" placeholder="coupon code">
+                        <button>Apply Coupon</button>
+                    </div>
+                    <div class="cart-totals">
+                        <h2>Cart Totals</h2>
+                        <div class="bill-section">
+                        <div class="cart-bill"><span>Subtotal</span><span><b>$230.00</b></span></div>
+                        <div class="cart-bill"><span>Total</span><span><b>$230.00</b></span></div>
+                        </div>
+                        <button><a href="checkout.html" style="color:white">Proceed To Checkout</a></button>
+                    </div>
+                </div>
+                </div>
+                </section>
+        
+       
+
+          <!-- Newsletter start -->
+          <section class="newsletter-section">
+            <div class="max-width">
+                <div class="newslatter-inner">
+                    <div class="newsletter-content">
+                        <p><i class="fa-regular fa-envelope"></i>Subscribe to Newsletter</p>
+                        <form action="#" class="newsletter-form">
+                            <input type="text" placeholder="Enter your name">
+                            <input type="email" placeholder="Enter your email">
+                            <button class="newsletter-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                    <div class="newsletter-image">
+                        <img src="images/sofa.png" alt="">
+                    </div>
+                </div>
+            </div>
+          </section>
+          
+          <!-- Newsletter end -->
+         
+    </main>
+    <!--main section end-->
+
+
+    <!--footer section start-->
+    <footer class="footer">
+        <div class="upperfooter">
+            <div class="max-width">
+                <div class="footer-inner">
+                    <div class="footer-content footer-brand">
+                        <div class="logo">
+                            <div class="logo-image">
+                                <a  class="logo-link" href="index.html">
+                                    <span>Ever</span><span>Wood</span><i class="fa-solid fa-couch"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <p>Our living room is filled with elegant furniture that brings both comfort and style. A soft sofa and cozy armchair sit around a wooden table, perfect for evening tea. </p>
+                        <div class="footer-social-icon">
+                            <div class="icon"><i class="fa-brands fa-facebook-f"></i></div>
+                            <div class="icon"><i class="fa-brands fa-instagram"></i></div>
+                            <div class="icon"><i class="fa-brands fa-linkedin"></i></div>
+                            <div class="icon"><i class="fa-brands fa-youtube"></i></div>   
+                        </div>
+                    </div>
+                    <div class="footer-content quick-link">
+                        <div class="heading3"><h3>Quick Links</h3><div class="small-box"></div></div>
+                        <a href="" class="f-link">About</a>
+                        <a href="" class="f-link">Services</a>
+                        <a href="" class="f-link">Blog</a>
+                        <a href="" class="f-link">Contact</a>
+                        <a href="" class="f-link">Site Map</a>
+                    </div>
+
+                    <div class="footer-content quick-support">
+                       <div class="heading3"><h3 >quick Support</h3><div class="small-box"></div></div>
+                        <a href="#" class="f-link">Support</a>
+                        <a href="#" class="f-link">Knowledge Base</a>
+                        <a href="#" class="f-link"> Live Chat</a>  
+                    </div>
+                    <div class="footer-content quick-update">
+                        <div class="heading3"><h3>quick-update</h3><div class="small-box"></div></div>
+                        <a href="" class="f-link">Jobs</a>
+                        <a href="" class="f-link">Our team</a>
+                        <a href="" class="f-link">Leadership</a>
+                        <a href="" class="f-link">Privacy Policy</a>
+                    </div>
+                    <div class="footer-content address-info">
+                        <div class="heading3"><h3>Address Info.</h3><div class="small-box"></div></div>
+                            <address><i class="fa-solid fa-location-dot"></i>In Front of Arjun Park, CP6, LGF, Sector I, Sector F, Jankipuram, Lucknow, Uttar Pradesh 226021</address>
+                            <a href="mailto:sethiananya99@gmail.com"><i class="fa-solid fa-envelope"></i>sethiananya99@gmail.com</a>
+                            <a href="tel:8052764865"><i class="fa-solid fa-phone"></i>+91 8052764865</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bfooter">
+            <div class="max-width">
+                <div class="bfooter-inner">
+                    <div class="copyright">
+                        <p>Copyright ©2025. All Rights Reserved. — Designed with love by  Ananya Sethi</p>
+                    </div>
+                    <div class="t-and-c">
+                        <sapn>Terms & Conditions</sapn>
+                        <sapn>Privacy Policy</sapn>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--footer section end-->
+
+
+    <!--link all js file-->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/script.js"></script>
+    
+</body>
+</html>

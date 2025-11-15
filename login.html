@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Website title-->
+    <title>E-Commerce</title>
+    <!--linked all css file-->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+     <style>
+        .newsletter-section{
+            padding-top: 130px;
+        }
+       
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .outer{
+            height: 100vh;
+            width: 100%;
+            background: rgb(234, 231, 231);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to right, #c1efe7, #cbd2f1);
+        }
+        .login{
+            height: 500px;
+            width: 400px;
+            background: white;
+            padding: 40px;
+            box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+        h1{
+            text-align: center;
+            padding: 20px;
+        }
+        input{
+            width: 100%;
+            height: 40px;
+            margin-bottom: 20px;
+            padding-left: 5px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+        .full-width {
+            width: 100%;
+        }
+        input::placeholder { 
+            font-size: 15px;
+        }
+        input:focus {
+            outline: none;
+            }
+        #cp{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #captcha{
+           font-weight: bold;
+        }
+        #cp span{
+            background: rgb(246, 224, 164);
+            padding: 10px;
+            border-radius: 6px;
+        }
+        #refresh {
+            padding: 8px 20px;
+            border: none;
+            background: rgb(11, 88, 155);
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #refresh:hover {
+            background:rgb(3, 72, 133);
+        }
+        .submit-btn{
+            width: 100%;
+            background: rgb(11, 88, 155);
+            border-radius: 6px;
+            color: white;
+            font-size: 20px;
+            border-bottom:none;
+        }
+        .submit-btn:hover{
+            background: rgb(3, 72, 133);
+            border-bottom: none; 
+            cursor: pointer;
+        }
+        .password-box{
+            position: relative;
+            width: 100%;
+        }
+        .show-password{
+            position: absolute;
+            top: 10%;
+            right: 5%;
+        }
+
+        @media(max-width:450px){
+            .login {
+                width:90%; 
+                padding:20px; 
+            }
+            #refresh {
+                 margin-top:10px; 
+            }
+        }
+
+   
+    </style>
+</head>
+<body>
+    <!-- Loader Section -->
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+    <!--header section start-->
+    <header class="header sticky" id="header">
+        <div class="max-width">
+            <div class="header-inner ">
+            <div class="logo">
+                <div class="logo-image">
+                    <a  class="logo-link" href="index.html">
+                        <span>Ever</span><span>Wood</span><i class="fa-solid fa-couch"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="navbar">
+                <nav class="nav-list">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="shop.html" class="nav-link">Shop</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="service.html" class="nav-link">Service</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="login.html" class="nav-link"><i class="fa-regular fa-user"></i></a>
+                    <a href="addToCart.html" class="nav-link"><i class="fa-solid fa-cart-shopping"></i></a>
+                    
+                </nav>
+            </div>
+            <i class="fa-solid bars fa-bars"></i>
+              </div>
+        </div>
+
+    </header>
+<!-- ---------------burger icon------------------ -->
+    <div class="side-menu" id="sideMenu">
+    <i class="fa-solid fa-xmark close-btn" id="closeBtn"></i>
+    <nav class="side-nav">
+        <a href="index.html" class="side-link">Home</a>
+        <a href="shop.html" class="side-link">Shop</a>
+        <a href="about.html" class="side-link">About Us</a>
+        <a href="service.html" class="side-link">Service</a>
+        <a href="blog.html" class="side-link">Blog</a>
+        <a href="contact.html" class="side-link">Contact</a>
+    </nav>
+</div>
+<!-- ----------------------------------------------------- -->
+
+    <!--header section end-->
+    <!--main section start-->
+    <main class="main-section">
+        <section class="hero-section">
+           <div class="outer">
+            <div class="login">
+                <h1>Login Form</h1>
+                <form id="LoginForm">
+                    <input type="email" id="email" class="full-width" placeholder="Enter Email" required><br>
+                    <div class="password-box">
+                        <input type="password" id="password"  class="full-width" placeholder="Enter Password" required>
+                        <i class="fa-solid fa-eye show-password" onclick="passwordShow()"></i>
+                    </div>
+
+                    <div id="cp">
+                        <span id="captcha">hjytvl</span>
+                        <button type="button" id="refresh" onclick="generateCaptcha()"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    </div>
+                    
+                    <input type="text" placeholder="Enter Captcha" id="matchCaptcha"><br><br>
+                    <input type="submit" value="Login" class="submit-btn" >
+                </form>
+                <p style="text-align: center;">Dont have an account? <a href="">Sign Up</a></p>
+            </div>
+    </div>
+        </section>
+
+       
+
+        
+
+       
+
+
+         
+
+          <!-- Newsletter start -->
+          <section class="newsletter-section">
+            <div class="max-width">
+                <div class="newslatter-inner">
+                    <div class="newsletter-content">
+                        <p><i class="fa-regular fa-envelope"></i>Subscribe to Newsletter</p>
+                        <form action="#" class="newsletter-form">
+                            <input type="text" placeholder="Enter your name">
+                            <input type="email" placeholder="Enter your email">
+                            <button class="newsletter-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                    <div class="newsletter-image">
+                        <img src="images/sofa.png" alt="">
+                    </div>
+                </div>
+            </div>
+          </section>
+          
+          <!-- Newsletter end -->
+         
+    </main>
+    <!--main section end-->
+
+
+    <!--footer section start-->
+    <footer class="footer">
+        <div class="upperfooter">
+            <div class="max-width">
+                <div class="footer-inner">
+                    <div class="footer-content footer-brand">
+                        <div class="logo">
+                            <div class="logo-image">
+                                <a  class="logo-link" href="index.html">
+                                    <span>Ever</span><span>Wood</span><i class="fa-solid fa-couch"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <p>Our living room is filled with elegant furniture that brings both comfort and style. A soft sofa and cozy armchair sit around a wooden table, perfect for evening tea. </p>
+                        <div class="footer-social-icon">
+                            <div class="icon"><i class="fa-brands fa-facebook-f"></i></div>
+                            <div class="icon"><i class="fa-brands fa-instagram"></i></div>
+                            <div class="icon"><i class="fa-brands fa-linkedin"></i></div>
+                            <div class="icon"><i class="fa-brands fa-youtube"></i></div>   
+                        </div>
+                    </div>
+                    <div class="footer-content quick-link">
+                        <div class="heading3"><h3>Quick Links</h3><div class="small-box"></div></div>
+                        <a href="" class="f-link">About</a>
+                        <a href="" class="f-link">Services</a>
+                        <a href="" class="f-link">Blog</a>
+                        <a href="" class="f-link">Contact</a>
+                        <a href="" class="f-link">Site Map</a>
+                    </div>
+
+                    <div class="footer-content quick-support">
+                       <div class="heading3"><h3 >quick Support</h3><div class="small-box"></div></div>
+                        <a href="#" class="f-link">Support</a>
+                        <a href="#" class="f-link">Knowledge Base</a>
+                        <a href="#" class="f-link"> Live Chat</a>  
+                    </div>
+                    <div class="footer-content quick-update">
+                        <div class="heading3"><h3>quick-update</h3><div class="small-box"></div></div>
+                        <a href="" class="f-link">Jobs</a>
+                        <a href="" class="f-link">Our team</a>
+                        <a href="" class="f-link">Leadership</a>
+                        <a href="" class="f-link">Privacy Policy</a>
+                    </div>
+                    <div class="footer-content address-info">
+                        <div class="heading3"><h3>Address Info.</h3><div class="small-box"></div></div>
+                            <address><i class="fa-solid fa-location-dot"></i>In Front of Arjun Park, CP6, LGF, Sector I, Sector F, Jankipuram, Lucknow, Uttar Pradesh 226021</address>
+                            <a href="mailto:sethiananya99@gmail.com"><i class="fa-solid fa-envelope"></i>sethiananya99@gmail.com</a>
+                            <a href="tel:8052764865"><i class="fa-solid fa-phone"></i>+91 8052764865</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bfooter">
+            <div class="max-width">
+                <div class="bfooter-inner">
+                    <div class="copyright">
+                        <p>Copyright ©2025. All Rights Reserved. — Designed with love by  Ananya Sethi</p>
+                    </div>
+                    <div class="t-and-c">
+                        <sapn>Terms & Conditions</sapn>
+                        <sapn>Privacy Policy</sapn>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--footer section end-->
+     <script>
+        function passwordShow() {
+        const password = document.getElementById("password");
+        const eyeIcon = document.querySelector(".show-password");
+        if (password.type === "password") {
+            password.type = "text";
+            eyeIcon.classList.remove("fa-eye");
+            eyeIcon.classList.add("fa-eye-slash");
+        } else {
+            password.type = "password";
+            eyeIcon.classList.remove("fa-eye-slash");
+            eyeIcon.classList.add("fa-eye");
+        }
+        }
+
+        //to generate captcha
+
+        let text=""
+        function generateCaptcha(){
+            const captchaText="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+             text="";
+            for(let i=0;i<6;i++){
+                text+=captchaText.charAt(Math.floor((Math.random()*captchaText.length)));   
+            }
+           document.querySelector("#captcha").innerHTML=text;
+
+        }
+        generateCaptcha();
+        
+        const btn=document.querySelector("#LoginForm");
+        btn.addEventListener("submit",function(e){
+            e.preventDefault();
+
+            const inputCaptcha=document.querySelector("#matchCaptcha").value;
+            if(inputCaptcha!==text){
+                alert("Does not match captcha");
+                generateCaptcha();
+                return ;
+            }
+            
+            const cnfsubmit=confirm("Are you sure submit your Form !");
+            if(cnfsubmit){
+                window.location.href="index.html";
+            }
+            else{
+                alert("Form Submition Failed")
+            }
+        })
+  
+</script>
+
+    <!--link all js file-->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
