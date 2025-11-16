@@ -1,0 +1,11 @@
+/* Minimal custom CSS for layout */
+body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+#wrapper { display: flex; }
+#sidebar { width: 220px; }
+#content-wrapper { flex: 1; }
+.card { border-radius: 8px; }
+.navbar-brand { font-weight: 700; }
+img.thumb { width: 60px; height: 60px; object-fit: cover; border-radius: 6px; }
+footer{
+    margin-top: 150px;
+}

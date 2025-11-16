@@ -378,6 +378,9 @@ a{
 .material-card:hover .material-plus-icon i{
      display: block;
 }
+.material-card a{
+     color:black;
+}
 
 /* material section end */
 

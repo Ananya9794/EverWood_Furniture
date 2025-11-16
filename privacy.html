@@ -11,112 +11,33 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
      <style>
-        .newsletter-section{
-            padding-top: 130px;
+        body {
+            font-family: Arial, sans-serif;
+            /* margin: 0;
+            padding: 0; */
+            background: linear-gradient(to bottom,var(--sixth-color),rgb(238, 244, 241)); 
+            
         }
-       
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        .outer{
-            height: 100vh;
-            width: 100%;
-            background: rgb(234, 231, 231);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(to right, #c1efe7, #cbd2f1);
-        }
-        .login{
-            height: 500px;
-            width: 400px;
-            background: white;
-            padding: 40px;
-            box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.5);
+        .container {
+            max-width: 90%;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
             border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            line-height: 2.0;
         }
-        h1{
-            text-align: center;
-            padding: 20px;
+        .container h1, h2 {
+            color: #333;
         }
-        input{
-            width: 100%;
-            height: 40px;
-            margin-bottom: 20px;
-            padding-left: 5px;
-            border-top: none;
-            border-left: none;
-            border-right: none;
+        .container p {
+            color: #444;
         }
-        .full-width {
-            width: 100%;
+        .shop-title{
+            height: 100px;
         }
-        input::placeholder { 
-            font-size: 15px;
-        }
-        input:focus {
-            outline: none;
-            }
-        #cp{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        #captcha{
-           font-weight: bold;
-        }
-        #cp span{
-            background: rgb(246, 224, 164);
-            padding: 10px;
-            border-radius: 6px;
-        }
-        #refresh {
-            padding: 8px 20px;
-            border: none;
-            background: rgb(11, 88, 155);
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        #refresh:hover {
-            background:rgb(3, 72, 133);
-        }
-        .submit-btn{
-            width: 100%;
-            background: rgb(11, 88, 155);
-            border-radius: 6px;
-            color: white;
-            font-size: 20px;
-            border-bottom:none;
-        }
-        .submit-btn:hover{
-            background: rgb(3, 72, 133);
-            border-bottom: none; 
-            cursor: pointer;
-        }
-        .password-box{
-            position: relative;
-            width: 100%;
-        }
-        .show-password{
-            position: absolute;
-            top: 10%;
-            right: 5%;
-        }
-
-        @media(max-width:450px){
-            .login {
-                width:90%; 
-                padding:20px; 
-            }
-            #refresh {
-                 margin-top:10px; 
-            }
-        }
-
-   
+        
+        
     </style>
 </head>
 <body>
@@ -171,36 +92,72 @@
     <!--header section end-->
     <!--main section start-->
     <main class="main-section">
-        <section class="hero-section">
-           <div class="outer">
-            <div class="login">
-                <h1>Login Form</h1>
-                <form id="LoginForm">
-                    <input type="email" id="email" class="full-width" placeholder="Enter Email" required><br>
-                    <div class="password-box">
-                        <input type="password" id="password"  class="full-width" placeholder="Enter Password" required>
-                        <i class="fa-solid fa-eye show-password" onclick="passwordShow()"></i>
-                    </div>
-
-                    <div id="cp">
-                        <span id="captcha">hjytvl</span>
-                        <button type="button" id="refresh" onclick="generateCaptcha()"><i class="fa-solid fa-arrows-rotate"></i></button>
-                    </div>
-                    
-                    <input type="text" placeholder="Enter Captcha" id="matchCaptcha"><br><br>
-                    <input type="submit" value="Login" class="submit-btn" >
-                </form>
-                <p style="text-align: center;">Dont have an account? <a href="">Sign Up</a></p>
+        
+        <section class="shop-title">
+            <div class="max-width">
+                <h2>Privacy Policy</h2>
             </div>
-    </div>
         </section>
+
+        <div class="container">
+        <h1>Privacy Policy</h1>
+        <p>Last updated: January 01, 2025</p>
+
+        <p>Welcome to our Furniture Store. We value your trust and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you visit or make a purchase from our website.</p>
+
+        <h2>1. Information We Collect</h2>
+        <p>We may collect the following types of information:</p>
+        <ul>
+            <li><strong>Personal Information:</strong> Name, email, phone number, billing details, shipping address.</li>
+            <li><strong>Usage Data:</strong> Pages visited, time spent on site, device details, IP address.</li>
+            <li><strong>Cookies & Tracking:</strong> For improving user experience and website performance.</li>
+        </ul>
+
+        <h2>2. How We Use Your Information</h2>
+        <ul>
+            <li>To process your orders and deliver products.</li>
+            <li>To communicate updates, offers, and customer support messages.</li>
+            <li>To improve the performance and user experience of our website.</li>
+        </ul>
+
+        <h2>3. Sharing Your Information</h2>
+        <p>We do not sell or rent your personal information. However, we may share data with:</p>
+        <ul>
+            <li>Delivery partners for order fulfillment.</li>
+            <li>Payment gateways for secure transactions.</li>
+            <li>Legal authorities when required by law.</li>
+        </ul>
+
+        <h2>4. Cookies</h2>
+        <p>We use cookies to personalize your browsing experience, remember preferences, and improve website performance. You can manage or disable cookies from your browser settings.</p>
+
+        <h2>5. Data Protection</h2>
+        <p>We use secure servers, SSL encryption, and strict access controls to protect your personal data from unauthorized access.</p>
+
+        <h2>6. Your Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+            <li>Access your personal information.</li>
+            <li>Request corrections or deletion of your data.</li>
+            <li>Opt-out of marketing communications.</li>
+        </ul>
+
+        <h2>7. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
+
+        <h2>8. Contact Us</h2>
+        <p>If you have questions about this Privacy Policy, you can contact us at:</p>
+        <p><strong>Email:</strong> support@everwood.com</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+    </div>
+        
 
           <!-- Newsletter start -->
           <section class="newsletter-section">
             <div class="max-width">
                 <div class="newslatter-inner">
                     <div class="newsletter-content">
-                        <p><i class="fa-regular fa-envelope"></i>Subscribe to Newsletter</p>
+                        <p><i class="fa-regular fa-envelope"></i>Cart</p>
                         <form action="#" class="newsletter-form">
                             <input type="text" placeholder="Enter your name">
                             <input type="email" placeholder="Enter your email">
@@ -215,12 +172,14 @@
           </section>
           
           <!-- Newsletter end -->
+
+          
          
     </main>
     <!--main section end-->
 
 
-    <!--footer section start-->
+   <!--footer section start-->
     <footer class="footer">
         <div class="upperfooter">
             <div class="max-width">
@@ -244,7 +203,7 @@
                     </div>
                     <div class="footer-content quick-link">
                         <div class="heading3"><h3>Quick Links</h3><div class="small-box"></div></div>
-                         <a href="about.html" class="f-link">About</a>
+                        <a href="about.html" class="f-link">About</a>
                         <a href="service.html" class="f-link">Services</a>
                         <a href="blog.html" class="f-link">Blog</a>
                         <a href="contact.html" class="f-link">Contact</a>
@@ -289,56 +248,7 @@
         </div>
     </footer>
     <!--footer section end-->
-     <script>
-        function passwordShow() {
-        const password = document.getElementById("password");
-        const eyeIcon = document.querySelector(".show-password");
-        if (password.type === "password") {
-            password.type = "text";
-            eyeIcon.classList.remove("fa-eye");
-            eyeIcon.classList.add("fa-eye-slash");
-        } else {
-            password.type = "password";
-            eyeIcon.classList.remove("fa-eye-slash");
-            eyeIcon.classList.add("fa-eye");
-        }
-        }
 
-        //to generate captcha
-
-        let text=""
-        function generateCaptcha(){
-            const captchaText="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-             text="";
-            for(let i=0;i<6;i++){
-                text+=captchaText.charAt(Math.floor((Math.random()*captchaText.length)));   
-            }
-           document.querySelector("#captcha").innerHTML=text;
-
-        }
-        generateCaptcha();
-        
-        const btn=document.querySelector("#LoginForm");
-        btn.addEventListener("submit",function(e){
-            e.preventDefault();
-
-            const inputCaptcha=document.querySelector("#matchCaptcha").value;
-            if(inputCaptcha!==text){
-                alert("Does not match captcha");
-                generateCaptcha();
-                return ;
-            }
-            
-            const cnfsubmit=confirm("Are you sure submit your Form !");
-            if(cnfsubmit){
-                window.location.href="index.html";
-            }
-            else{
-                alert("Form Submition Failed")
-            }
-        })
-  
-</script>
 
     <!--link all js file-->
     <script src="js/jquery-3.7.1.min.js"></script>
