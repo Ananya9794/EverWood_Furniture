@@ -316,6 +316,14 @@
     .thanku-cart h2{
      font-size: 40px;
 }
+.carousel-title{
+     font-size: 2em;
+}
+.carousel-content{
+     font-size: 14px;
+
+}
+  
 
 }
 /* --------------------------------------------- */
@@ -378,5 +386,5 @@
     .thanku-cart p{
      font-size: 15px;
 }
-   
+ 
 }
