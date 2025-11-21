@@ -5,91 +5,178 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Website title-->
     <title>E-Commerce</title>
+
     <!--linked all css file-->
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+
     <style>
-        .thanku-section{
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+        }
+
+        /* SAME BACKGROUND AS THANK YOU PAGE */
+        .registration-section{
+            padding: 60px 0;
+        }
+        .outer{
+             height: 100vh;
+            width: 100%;
             background: linear-gradient(to bottom,var(--sixth-color),rgb(238, 244, 241));
+
+        }
+
+        .register-box {
+            width: 400px;
+            background: white;
+            padding: 35px;
+            margin: auto;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px #cfcfcf;
+        }
+
+        .register-box h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .register-box form label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+
+        .register-box form input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #999;
+            border-radius: 5px;
+        }
+
+        .register-box button {
+            width: 100%;
+            background: #000;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 25px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .register-box button:hover {
+            background: #444;
+        }
+
+        .login-text {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .login-text a {
+            text-decoration: none;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    
 
     <!--header section start-->
     <header class="header" id="header">
         <div class="max-width">
             <div class="header-inner ">
-            <div class="logo">
-                <div class="logo-image">
-                    <a  class="logo-link" href="index.html">
-                        <span>Ever</span><span>Wood</span><i class="fa-solid fa-couch"></i>
-                    </a>
+                <div class="logo">
+                    <div class="logo-image">
+                        <a class="logo-link" href="index.html">
+                            <span>Ever</span><span>Wood</span><i class="fa-solid fa-couch"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar">
+                    <nav class="nav-list">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="shop.html" class="nav-link">Shop</a>
+                        <a href="about.html" class="nav-link">About Us</a>
+                        <a href="service.html" class="nav-link">Service</a>
+                        <a href="blog.html" class="nav-link">Blog</a>
+                        <a href="contact.html" class="nav-link">Contact</a>
+                        <a href="login.html" class="nav-link"><i class="fa-regular fa-user"></i></a>
+                        <a href="addToCart.html" class="nav-link"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </nav>
+                </div>
+                <i class="fa-solid bars fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!--header section end-->
+
+    <!--burger menu-->
+    <div class="side-menu" id="sideMenu">
+        <i class="fa-solid fa-xmark close-btn" id="closeBtn"></i>
+        <nav class="side-nav">
+            <a href="index.html" class="side-link">Home</a>
+            <a href="shop.html" class="side-link">Shop</a>
+            <a href="about.html" class="side-link">About Us</a>
+            <a href="service.html" class="side-link">Service</a>
+            <a href="blog.html" class="side-link">Blog</a>
+            <a href="contact.html" class="side-link">Contact</a>
+        </nav>
+    </div>
+
+    <!--main-->
+    <main class="main-section">
+
+        <section class="registration-section">
+            <div class="outer">
+            <div class="max-width">
+
+                <div class="register-box">
+                    <h2>Create Your Account</h2>
+
+                    <form>
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Enter your name" required>
+
+                        <label>Email</label>
+                        <input type="email" placeholder="Enter your email" required>
+
+                        <label>Phone Number</label>
+                        <input type="text" placeholder="Enter your phone number" required>
+
+                        <label>Password</label>
+                        <input type="password" placeholder="Create password" required>
+
+                        <label>Confirm Password</label>
+                        <input type="password" placeholder="Confirm password" required>
+
+                        <button type="submit">Register</button>
+
+                        <p class="login-text">
+                            Already have an account? <a href="login.html">Login</a>
+                        </p>
+
+                    </form>
                 </div>
             </div>
-            <div class="navbar">
-                <nav class="nav-list">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="shop.html" class="nav-link">Shop</a>
-                    <a href="about.html" class="nav-link">About Us</a>
-                    <a href="service.html" class="nav-link">Service</a>
-                    <a href="blog.html" class="nav-link">Blog</a>
-                    <a href="contact.html" class="nav-link">Contact</a>
-                    <a href="login.html" class="nav-link"><i class="fa-regular fa-user"></i></a>
-                    <a href="addToCart.html" class="nav-link"><i class="fa-solid fa-cart-shopping"></i></a>
-                    
-                </nav>
-            </div>
-            <i class="fa-solid bars fa-bars"></i>
-              </div>
-        </div>
-
-    </header>
-<!-- ---------------burger icon------------------ -->
-    <div class="side-menu" id="sideMenu">
-    <i class="fa-solid fa-xmark close-btn" id="closeBtn"></i>
-    <nav class="side-nav">
-        <a href="index.html" class="side-link">Home</a>
-        <a href="shop.html" class="side-link">Shop</a>
-        <a href="about.html" class="side-link">About Us</a>
-        <a href="service.html" class="side-link">Service</a>
-        <a href="blog.html" class="side-link">Blog</a>
-        <a href="contact.html" class="side-link">Contact</a>
-    </nav>
-</div>
-<!-- ----------------------------------------------------- -->
-
-    <!--header section end-->
-    <!--main section start-->
-    <main class="main-section">
-        
-        <section class="shop-title">
-            <div class="max-width">
-                <h2>Shop</h2>
             </div>
         </section>
-
-        <section class="thanku-section">
-            <div class="max-width">
-                <div class="thanku-cart">
-                    <i class="fa-solid fa-cart-arrow-down"></i>
-                    <h2>THANK YOU !</h2>
-                    <p>You order was successfuly completed.</p>
-                    <a href="shop.html">Back to shop</a>
-                </div>
-            </div>
-          </section>
-        
 
           <!-- Newsletter start -->
           <section class="newsletter-section">
             <div class="max-width">
                 <div class="newslatter-inner">
                     <div class="newsletter-content">
-                        <p><i class="fa-regular fa-envelope"></i>Cart</p>
+                        <p><i class="fa-regular fa-envelope"></i>Subscribe to Newsletter</p>
                         <form action="#" class="newsletter-form">
                             <input type="text" placeholder="Enter your name">
                             <input type="email" placeholder="Enter your email">
@@ -104,15 +191,13 @@
           </section>
           
           <!-- Newsletter end -->
-
-          
          
     </main>
     <!--main section end-->
 
-
-    <!--footer section start-->
+    <!--footer-->
     <footer class="footer">
+         <footer class="footer">
         <div class="upperfooter">
             <div class="max-width">
                 <div class="footer-inner">
@@ -179,13 +264,12 @@
             </div>
         </div>
     </footer>
-    <!--footer section end-->
+    </footer>
 
-
-    <!--link all js file-->
+    <!--JS-->
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/script.js"></script>
-    
+
 </body>
 </html>
